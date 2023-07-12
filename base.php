@@ -30,15 +30,15 @@
         $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    $title=new Title;
-    $title=new Ad;
-    $title=new Admin;
-    $title=new Bottom;
-    $title=new Image;
-    $title=new Menu;
-    $title=new Mvim;
-    $title=new News;
-    $title=new Total;
+    $Title=new Title;
+    $Ad=new Ad;
+    $Admin=new Admin;
+    $Bottom=new Bottom;
+    $Image=new Image;
+    $Menu=new Menu;
+    $Mvim=new Mvim;
+    $News=new News;
+    $Total=new Total;
 
 
 

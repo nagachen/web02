@@ -42,9 +42,10 @@
 		$files="./front/".$do.".php";
 		if(file_exists($files)){
 			include "$files";
+			
 		}else{
 			include "./front/main.php"; 
-
+			
 		}
 		?>
 			
