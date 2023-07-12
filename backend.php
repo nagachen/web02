@@ -107,11 +107,11 @@ include_once "base.php";
 				$do = $_GET['do'] ?? 'title';
 				$files = "./view/" . $do . ".php";
 				if (file_exists($files)) {
-					$table = ucfirst($do);
+					$table = $do;
 					include "$files";
 				} else {
 					include "./view/title.php";
-					$table = ucfirst('title');
+					$table = 'title';
 				}
 				?>
 				<div style="clear:both;"></div>

@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $BASEDIR=dirname('__FILE__');
+    $BASEDIR=__DIR__;
 
     include_once $BASEDIR . "/controller/Title.php";
     include_once $BASEDIR . "/controller/Ad.php";
