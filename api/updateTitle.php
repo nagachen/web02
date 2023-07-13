@@ -6,10 +6,12 @@ $data['id']=$_POST['id'];
 $table=$_POST['table'];
 $db=ucfirst($table);
 
-$data=[];
+
 switch($table){
     case 'title':
-        
+    case 'image': 
+    case 'mvim':    
+
         $img=$_FILES['img'];
         if(!empty($img['tmp_name'])){       
             move_uploaded_file($img['tmp_name'],"../upload/{$img['name']}");
@@ -21,7 +23,7 @@ switch($table){
 
 
 
-$$db->save($data);
+ $$db->save($data);
 
   to("../backend.php?do=$table");
 

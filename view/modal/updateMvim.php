@@ -1,13 +1,13 @@
-<h3 class='cent'>更換標題區圖片</h3>
+<h3 class='cent'>更換動畫區圖片</h3>
 <hr>
 <form action='./api/updateTitle.php' method='post' enctype="multipart/form-data">
 <table style="width:70%; margin:auto">
     <tr>
-        <td>標題區圖片</td>
+        <td>動畫區圖片</td>
         <td><input type='file' name='img' ></td>
     </tr>
     
-    <input type='hidden' name='table' value='title'>
+    <input type='hidden' name='table' value='mvim'>
     <input type='hidden' name='id' value="<?=$_GET['id']?>">
 
     <tr>

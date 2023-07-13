@@ -144,7 +144,7 @@
                 'pages'=>$pages,
                 'total'=>$total,
             ];
-            dd($this->links);
+           
             
             return $rows;
         }
