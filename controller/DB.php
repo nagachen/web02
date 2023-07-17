@@ -40,7 +40,7 @@
                     }
                     $sql=$sql . ' where '. join('&&',$tmp);
                 }else{
-                    $sql=$sql . " where `id` = '$arg'";
+                    $sql=$sql . " where `id` = $arg";
                 }
                 dd($sql);
                 return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);

@@ -13,7 +13,7 @@
                 </tr>
                 <?php
                 $db = ucfirst($table);
-                $rows = $$db->all();
+                $rows = $$db->pagenite(3);
                 foreach ($rows as $key => $row) {
 
                 ?>
@@ -34,6 +34,12 @@
                         ?>
                 </tbody>
             </table>
+            <?php
+            echo "<div class='cent'>";
+                $$db->links();
+            echo "</div>";
+
+            ?>
             <table style="margin-top:40px; width:70%;">
                 <tbody>
                     <tr>

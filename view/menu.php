@@ -17,11 +17,14 @@
                     </tr>
                     <?php
                     $db=ucfirst($table);
-                    $rows = $$db->all();
+                    $rows = $$db->all(['main_id'=>'0']);
+                    
                     foreach ($rows as $key => $row) {
                         
                     ?>
                         <tr>
+                        <input type="hidden" name="id[<?= $row['id'] ?>]" value="<?= $row['id'] ?>">
+
                             <td width="30%">
                              <input type='text' name="text[<?=$row['id'];?>]" value="<?= $row['text']; ?>">
 
@@ -30,10 +33,10 @@
                                 <input type='text' name="href[<?=$row['id'];?>]" value="<?= $row['href']; ?>">
                             </td>
                             <td width="7%">
-                                <!-- 另外處理 -->
+                                <?= $Menu->count(['main_id'=>$row['id']])?>
                             </td>
                             <td width="7%">
-                                <input type='checkbox' name='sh' <?=($row['sh']==1)?'checked':''; ?> value="<?=$row['id'];?>"></td>
+                                <input type='checkbox' name='sh[<?=$row['id']?>]' <?=($row['sh']==1)?'checked':''; ?> value="<?=$row['id'];?>"></td>
                             <td width="7%">
                                 <input type='checkbox' name="del[<?=$row['id']?>]" value="<?=$row['id'];?>"></td>
                         <td width="15%">

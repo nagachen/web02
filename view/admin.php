@@ -41,7 +41,7 @@
         <table style="margin-top:40px; width:70%;">
             <tbody>
                 <tr>
-                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','./view/modal/admin.php')" value="新增網站標題圖片"></td>
+                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','./view/modal/admin.php')" value="新增網站管理帳號"></td>
                     <td class="cent">
 
 
