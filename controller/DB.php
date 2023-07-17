@@ -42,7 +42,7 @@
                 }else{
                     $sql=$sql . " where `id` = $arg";
                 }
-                dd($sql);
+                // dd($sql);
                 return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
             }
         }
