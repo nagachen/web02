@@ -23,8 +23,11 @@ include_once "base.php";
 	</div>
 
 	<div id="main">
-		<a title="" href="?">
-			<div class="ti" style="background:url(&#39;use/&#39;); background-size:cover;"></div><!--標題-->
+	<?php
+				$title=$Title->find(['sh'=>'1']);
+			?>
+		<a title="卓越科技大學資訊系統" href="./index.php">
+			<div class="ti" style="background:url('./upload/<?=$title['img']?>'); background-size:cover;"></div><!--標題-->
 		</a>
 		<div id="ms">
 			<div id="lf" style="float:left;">

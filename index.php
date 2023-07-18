@@ -98,7 +98,7 @@ include_once "base.php";
 			</script>
 			<div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
 				<!--右邊-->
-				<button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;" onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
+				<button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;" onclick="lo(&#39;?do=login&#39;)">管理登入</button>
 				<div style="width:89%; height:480px;" class="dbor">
 					<span class="t botli">校園映象區</span>
 					<div class='cent' onclick="pp(1)">
@@ -123,14 +123,14 @@ include_once "base.php";
 					</div>
 					<script>
 						var nowpage = 0,
-							num = 0;
+							num = <?=$Image->count(['sh'=>1]);?>
 
 						function pp(x) {
 							var s, t;
 							if (x == 1 && nowpage - 1 >= 0) {
 								nowpage--;
 							}
-							if (x == 2 && (nowpage + 1) * 3 <= num * 1 + 3) {
+							if (x == 2 && nowpage  < (num - 3)) {
 								nowpage++;
 							}
 							$(".im").hide()
